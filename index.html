@@ -20,7 +20,7 @@
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -45,14 +45,14 @@
         .graficos-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 30px;
+            gap: 40px;
             margin-top: 30px;
         }
         
         .grafico-card {
             background: white;
             border-radius: 15px;
-            padding: 25px;
+            padding: 30px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -63,45 +63,48 @@
         }
         
         .grafico-title {
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             color: #2c3e50;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             text-align: center;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
         }
         
         .grafico-img {
             width: 100%;
             height: auto;
-            border-radius: 8px;
-            border: 1px solid #ddd;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: block;
         }
         
         .grafico-desc {
-            margin-top: 15px;
+            margin-top: 20px;
             color: #666;
             text-align: center;
-            font-size: 0.9rem;
+            font-size: 1.1rem;
+            line-height: 1.5;
         }
         
         footer {
             text-align: center;
             color: white;
             margin-top: 50px;
-            padding: 20px;
+            padding: 30px;
             opacity: 0.8;
+            font-size: 1.1rem;
         }
         
         @media (min-width: 768px) {
             .graficos-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-        }
-        
-        @media (min-width: 1200px) {
-            .graficos-grid {
-                grid-template-columns: repeat(2, 1fr);
+            
+            .grafico-card:last-child {
+                grid-column: 1 / -1;
             }
         }
     </style>
@@ -109,7 +112,7 @@
 <body>
     <div class="container">
         <header>
-            <h1>📊 Análisis de Calidad de Aguas</h1>
+            <h1> Análisis de Calidad de Aguas</h1>
             <p class="subtitle">Monitoreo de Parámetros Fisicoquímicos 2000-2019</p>
         </header>
         
@@ -144,7 +147,7 @@
                 </div>
                 
                 <!-- Gráfico 5: Multiparámetro -->
-                <div class="grafico-card" style="grid-column: 1 / -1;">
+                <div class="grafico-card">
                     <h2 class="grafico-title"> Vista Multiparámetro</h2>
                     <img src="multiparametro_rios.png" alt="Gráfico Multiparámetro" class="grafico-img">
                     <p class="grafico-desc">Comparativa integral de todos los parámetros fisicoquímicos analizados</p>
